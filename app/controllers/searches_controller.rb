@@ -10,7 +10,8 @@ class SearchesController < ApplicationController
     unless @coordinates.nil?
 
       @coordinates = { "latitude" => @coordinates[0], "longitude" => @coordinates[1] }
-      @citibike_docks = Citibikenyc.branches.values[2]
+      @citibike_docks = Citibikenyc.stations.values[2]
+
 
       @distances = @citibike_docks.map do |dock|
       @distance_x = @coordinates["longitude"] - dock["longitude"]
@@ -29,12 +30,4 @@ class SearchesController < ApplicationController
 
   end
 
-end
-
-
-# @distances.map do |x| @n = x[1]
-# end
-
-@n =  Citibikenyc.stations.values[2]
-@lat = @n.map do |x| puts x["latitude"]
 end
