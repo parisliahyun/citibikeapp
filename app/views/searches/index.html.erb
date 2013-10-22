@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h1>Find docks near your destination:</h1>  
+  
+   <div class="form">
+    <%= form_tag searches_path, :method => :get do %>   
+        <%= text_field_tag :address, params[:address] %>  
+        <%= submit_tag "Go", :name => nil %>  
+    <% end %>  
+  </div> 
+</div>
+
+
+<h3><%= "#{@x}#{@y}" %></h3>
+<h3><%= "#{@result}" %></h3>
+<h3><%= "#{@final_glorious_answer}" %></h3>
+
