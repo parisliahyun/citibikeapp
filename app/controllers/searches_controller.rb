@@ -1,8 +1,9 @@
 class SearchesController < ApplicationController
 
+
   def index
     @coordinates = Geocoder.coordinates(params[:address])
-
+      # need if statement to avoid error
         @x = @coordinates[0]
         @y = @coordinates[1]
  
