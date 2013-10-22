@@ -1,10 +1,14 @@
 class SearchesController < ApplicationController
 
+#  double check the logic - don't think it's returning shortest distance.
+# if available_docks == 0, exclude station from results.
+# if winning_dock's available_docks == 0 within .1 miles of user's position, send notification to reroute with address to available dock. 
+
   def index
     @coordinates = Geocoder.coordinates(params[:address])
 
     unless @coordinates.nil?
-      
+
       @coordinates = { "latitude" => @coordinates[0], "longitude" => @coordinates[1] }
       @citibike_docks = Citibikenyc.branches.values[2]
 
@@ -13,14 +17,11 @@ class SearchesController < ApplicationController
       @distance_y = @coordinates["latitude"] - dock["latitude"]
 
       @distance_to_one_dock = Math.hypot( @distance_x, @distance_y )
-      [dock["label"], @distance_to_one_dock]
       end
+      @final = @distances.min
+      @i = @distances.index(@final)
+      @winning_dock = @citibike_docks[@i]["label"]
 
-      binding.pry
-
-      #@distances.min
-      #@final_glorious_answer = Geocoder.address(@closest_dock)
- 
       render :index
     else
       render erb: "<%= debug Geocoder.coordinates(params[:address]) %>"
@@ -28,4 +29,12 @@ class SearchesController < ApplicationController
 
   end
 
+end
+
+
+# @distances.map do |x| @n = x[1]
+# end
+
+@n =  Citibikenyc.stations.values[2]
+@lat = @n.map do |x| puts x["latitude"]
 end
