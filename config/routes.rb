@@ -5,7 +5,7 @@ Citi::Application.routes.draw do
     resources :favorites
       member do
         post 'favorite'
-       end 
+      end 
   end
 
   root 'welcome#index'

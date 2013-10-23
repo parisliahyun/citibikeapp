@@ -33,7 +33,7 @@ class SearchesController < ApplicationController
 
       # define hash where key == station name & value == it's distance
 
-# associate the label with the distance that we generated. 
+      # associate the label with the distance that we generated. 
 
       # delete key value pairs that have distance == nil
       # @distances.delete_if { |station, distance| distance == nil }
