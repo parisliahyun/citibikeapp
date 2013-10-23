@@ -2,7 +2,10 @@ Citi::Application.routes.draw do
   resources :users, only: [:new, :create, :show, :delete]
 
   resources :users do
-  resources :favorites
+    resources :favorites
+      member do
+        post 'favorite'
+       end 
   end
 
   root 'welcome#index'

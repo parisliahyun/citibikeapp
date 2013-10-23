@@ -1,7 +1,7 @@
-<h1>Here are the trips in our database.</h1>
+<h1>Favorites</h1>
 
 <ul>
   <% @favorites.each do |favorite| %>
-      <li>Address: <%= link_to favorite.address, favorite_path(favorite)%></li>
+      <li>Address: <%= "#{favorite.address}" %></li>
   <% end %>
 </ul>

@@ -1,10 +1,22 @@
-<h1><%= @user.username %></h1>
+<h1><%= "Welcome, #{@user.username}!" %></h1>
+
+  <div class="container">
+   <div class="form">
+      <%= form_tag searches_path, :method => :get do %>   
+          <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
+          <%= submit_tag "Go", :name => nil %>  
+      <% end %>  
+    </div> 
+  </div>
 
 
-<h3>
-  <%= link_to "Back", user_path %> |
-  <%= link_to "Edit", edit_user_path(@user) %> |
-<!-- need the :method below b/c http requests typically send GET, but here we need DELETE so we're specifying. -->
-  <%= link_to "Destroy", user_path(@user), :method => :delete %>
-</h3>
+<!--    <div class="nav">   
+      <h3>
+          <%= link_to "Back", user_path %> |
+          <%= link_to "Edit", edit_user_path(@user) %> |
+        need the :method below b/c http requests typically send GET, but here we need DELETE so we're specifying.
+          <%= link_to "Destroy", user_path(@user), :method => :delete %>
+        </h3>
+    </div> -->
+</div>
 

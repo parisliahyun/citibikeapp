@@ -5,6 +5,7 @@ class SearchesController < ApplicationController
 # if winning_dock's available_docks == 0 within .1 miles of user's position, send notification to reroute with address to available dock. 
 
   def index
+    @address = Favorite.new(address: params[:address])
     @coordinates = Geocoder.coordinates(params[:address])
 
     unless @coordinates.nil?
@@ -27,10 +28,14 @@ class SearchesController < ApplicationController
       render :index
     else
       render erb: "<%= debug Geocoder.coordinates(params[:address]) %>"
-
+    # redirect to searches#results when search is successful. 
     end
   end
-end
 
+  def results
+      render :results
+  end
+
+end
 
 
