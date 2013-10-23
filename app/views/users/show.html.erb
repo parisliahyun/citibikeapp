@@ -15,8 +15,8 @@
   <ul>
     <li>your favorites:</li>
     <% @user.favorites.each do |favorite| %>
-      <%= form_tag searches_path(current_user), :method => :get do %>
-      <%= submit_tag "#{favorite.address}", :name => :address  %>
+      <%= form_tag searches_path, :method => :post do %>
+      <%= submit_tag "#{favorite.address}", :name => :address %>
     <% end %>
     <% end %>
   </ul>
