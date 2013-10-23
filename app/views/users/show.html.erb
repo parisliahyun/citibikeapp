@@ -1,26 +1,25 @@
-<h1><%= "Welcome, #{@user.username}!" %></h1>
+<div class="container">
 
-  <div class="container">
-   <div class="form">
-      <%= form_tag searches_path, :method => :get do %>   
-          <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-          <%= submit_tag "Go", :name => nil %>  
-      <% end %>  
-    </div> 
-  </div>
+  <h1><%= "Welcome, #{@user.username}!" %></h1>
 
-<ul>
-<li><h3><%= link_to "Go to Favorites", user_favorites_path(current_user) %></h3></li>
-</ul>
+    <div class="container">
+     <div class="form">
+        <%= form_tag searches_path, :method => :get do %>   
+            <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
+            <%= submit_tag "Go", :name => nil %>  
+        <% end %>  
+      </div> 
+    </div>
 
 
-<!--    <div class="nav">   
-      <h3>
-          <%= link_to "Back", user_path %> |
-          <%= link_to "Edit", edit_user_path(@user) %> |
-        need the :method below b/c http requests typically send GET, but here we need DELETE so we're specifying.
-          <%= link_to "Destroy", user_path(@user), :method => :delete %>
-        </h3>
-    </div> -->
+  <ul>
+    <li>your favorites:</li>
+    <% @user.favorites.each do |favorite| %>
+      <%= form_tag searches_path(current_user), :method => :get do %>
+      <%= submit_tag "#{favorite.address}", :name => :address  %>
+    <% end %>
+    <% end %>
+  </ul>
+
 </div>
 

@@ -1,10 +1,12 @@
-<h1>Favorites</h1>
+<div class="container"></div>
+  <h1>Favorites</h1>
 
- <ul>
-    <% @favorites.each do |favorite| %>
-      <%= form_tag searches_path(current_user), :method => :get do %>
-      <%= hidden_field_tag :address, params[:address] %>
-      <%= submit_tag "#{favorite.address}", :name => :address  %>
-      <% end %>
-    <% end %>
-</ul>
+  <% @favorites.each do |favorite| %>
+  <ul>
+     <li><%=  "#{favorite.address}" %></li>
+  <% end %>
+  </ul>
+</div>
+
+
+

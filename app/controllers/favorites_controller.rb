@@ -10,7 +10,8 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new(favorites_params)
     current_user.favorites << @favorite
     if @favorite.save
-      redirect_to user_favorites_path(current_user)
+      redirect_to user_path(current_user)
+      # redirect_to user_favorites_path(current_user)
 
     else
       redirect_to user_path(current_user)
@@ -25,9 +26,17 @@ class FavoritesController < ApplicationController
   end
 
   def favorite?
-    favorites[user_id].present?
+    favorites[user_id].present? == false
   end
 
 
-
 end  
+
+
+
+# <ul>
+#   <li><h3><%= link_to "Go to Favorites", user_favorites_path(current_user) %></h3></li>
+# </ul>
+
+
+

@@ -12,4 +12,10 @@ end
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end
-  end
+
+ def favorites?
+    @favorites[:user_id] == nil
+end
+
+
+end
