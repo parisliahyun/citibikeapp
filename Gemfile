@@ -47,7 +47,7 @@ gem "citibikenyc", "~> 0.0.1"
 
 gem "geocoder", "~> 1.1.8"
 
-# gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server
 # gem 'unicorn'
