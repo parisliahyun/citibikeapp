@@ -3,22 +3,21 @@
 <div class="results">
   <%  unless @coordinates.nil? %>
   <ul>
-    <!-- <li><h3><%= "Destination coordinates: #{@coordinates}" %></h3></li> -->
     <li><h3><%= "Address of the closest dock to the destination: "%></h3></li>
     <li><h3><%="#{@winning_dock} has #{@citibike_docks[@i]["availableDocks"] } docks available. Huzzah!!" %></h3></li>
   </ul>
 </div>
 <% end  %>
 
+
  <% if logged_in? %>
  <div class="form">
     <%= form_tag user_favorites_path(current_user), :method => :post do %>
     <%= hidden_field_tag "favorite[address]", params[:address]%>
-    <%= submit_tag "Save Destination to Favorites!" %>
+    <%= submit_tag "Save Search to Favorites!" %>
     <% end %>
-
-<% end %>
 </div>
+<% end %>
 
 <h1>Find docks near your destination:</h1>  
 

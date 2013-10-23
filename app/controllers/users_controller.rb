@@ -58,7 +58,6 @@ private
 
 # this checks for authentication, if not logged in, kick them back to log in page.
 
-
   def set_user
     @user = User.find(params[:id])
   end

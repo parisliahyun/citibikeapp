@@ -24,4 +24,10 @@ class FavoritesController < ApplicationController
     params.require(:favorite).permit(:address)
   end
 
+  def favorite?
+    favorites[user_id].present?
+  end
+
+
+
 end  
