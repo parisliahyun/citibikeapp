@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-self.before_action( :authenticated!, :set_user, :authorized!, except: [:new, :create] )
+  self.before_action( :authenticated!, :set_user, :authorized!, except: [:new, :create] )
 
   def show
     render :show
@@ -13,37 +13,35 @@ self.before_action( :authenticated!, :set_user, :authorized!, except: [:new, :cr
 
   def create
     # can't do a redirect or else we'll lose our new object. must use render: new
-# need this when you're grabbing user input to create a new model.
+    # need this when you're grabbing user input to create a new model.
     @user = User.new(user_params)
     # @user = User.find(params[:id])
 
-   if @user.save
-    redirect_to user_path(@user) 
-  else
-    render :new
+    if @user.save
+      redirect_to user_path(@user) 
+    else
+      render :new
+    end
   end
-end
 
-def edit
-end
-
-def update
-
-  if @user.update_attributes(user_params)
-    redirect_to user_path(@user)
-  else
-    render :edit
+  def edit
   end
- end 
 
-def destroy
+  def update
+    if @user.update_attributes(user_params)
+      redirect_to user_path(@user)
+    else
+      render :edit
+    end
+  end 
 
+  def destroy
     if @user.destroy
       redirect_to new_user_path
     else 
       render :edit
     end
-end
+  end
 
 private
 
@@ -66,8 +64,8 @@ private
   def authorized!
     unless @user.id == session[:user_id]
       redirect_to user_path(session[:user_id])
+    end
   end
-end
 end
 
 
