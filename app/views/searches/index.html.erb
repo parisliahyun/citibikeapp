@@ -4,7 +4,7 @@
   <%  unless @coordinates.nil? %>
   <ul>
     <li><h3><%= "Closest dock: "%></h3></li>
-    <li><h3><%="#{@winning_dock} has #{@winning_dock_available_docks } dock(s) available. Huzzah!!" %></h3></li>
+    <li><h3><%="#{@winning_dock["label"]} has #{@winning_dock["availableDocks"] } dock(s) available. Huzzah!!" %></h3></li>
   </ul>
   <% end  %>
 </div>
