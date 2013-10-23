@@ -9,7 +9,6 @@
   <% end  %>
 </div>
 
-
  <div class="form">
     <%= form_tag user_favorites_path(current_user), :method => :post do %>
     <%= hidden_field_tag "favorite[address]", params[:address]%>
@@ -17,18 +16,8 @@
     <% end %>
 </div>
 
-
-<h1>Find docks near your destination:</h1>  
-
- <div class="form">
-    <%= form_tag searches_path, :method => :get do %>   
-    <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-    <%= submit_tag "Go", :name => nil %>  
-    <% end %>  
-</div>
-
 <ul>
-  <li><h3><%= link_to "New Search", searches_path %></h3></li>
+  <li><h3><%= link_to "New Search", new_search_path %></h3></li>
   <li><h3><%= link_to "Go to Favorites", user_path(current_user) %></h3></li>
 </ul>
 
