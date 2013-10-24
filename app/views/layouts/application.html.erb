@@ -7,15 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
-    <% if logged_in? %>
-    <li><h2><%= link_to "Awesome Citi", root_path %></h2></li>
-    <li><h2><%= link_to "New Search", new_search_path %></h2></li>
-    <li><h2><%= link_to 'Logout', session_path, :method => :delete %></h2></li>
-    <% end %>
-    </ul>
-  </nav>
+  <div class="container">
+
+  </div>
 <%= yield %>
 </div>
 </body>

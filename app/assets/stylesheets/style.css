@@ -7,26 +7,13 @@ body {
     margin: 0 auto;
     text-align: center;
     }
-/*
-div.mural {
-    background-image: url("http://images.huffingtonpost.com/2013-05-30-citibike.jpg");
-    background-repeat:no-repeat;
-    background-size: 100%;
-    background-position: relative;
-    background-attachment: fixed;
-    padding-bottom: 40px;
-} */ 
+
+
 
 .container {
     width: 100%;
     margin-top: 5px;
     margin: 0 auto;
-}
-
-h1 {
-  margin-top: 40px; 
-  color: orange;
-  font-size: 40px;
 }
 
 
@@ -40,21 +27,21 @@ h1 {
 }
 
 a:link, a:visited {
-    color: #38488f;
+    color: gray;
     text-decoration: none;
 }
 
 ul {
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     font-family: sans-serif;
     padding-bottom: 60px;
 }
 
 li {
     font-family: sans-serif;
-    padding: 5px;
+    padding-right: 30px;
     color: gray;
-    font-size: 60px;
+    font-size: 20px;
     font-weight: bold;
     display: block;
     text-decoration: none;
@@ -106,23 +93,83 @@ input    {
     text-align: center;
     padding: 15px;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 36px;
     margin: 20px auto;
-    width: 800px;
+    width: 900px;
     border: 1px solid #999;
     height: 100px;
+    color: 2d2d2d2d;
+    font-family: oxygen;
     -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-h2 {
+
+
+h5 {
     text-align: center;
-    margin-top: 40px;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    font-size: 30px;
-    color: orange;
+    font-size: 50px;
+    color: gray;
 }
+
+h1 {
+  margin-top: 150px; 
+  color: #FF0000;
+  font-size: 80px;
+}
+
+h2 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: gray;
+}
+
+.nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+/*    background-color: #eaeaea;
+    border: solid 3px #eaeaea;*/
+}
+
+.nav li {
+    float: left;
+}
+
+.nav ul {
+    font-family: geneva;
+    padding-bottom: 20px;
+    /*padding-top: 20px;*/
+}
+.nav li a {
+    font-family: helvetica;
+    color: #FF0000;
+    text-transform: uppercase;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font: helvetica;
+    font-size: 18px;
+}
+
 
 
