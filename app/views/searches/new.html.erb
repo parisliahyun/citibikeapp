@@ -1,12 +1,11 @@
 <div class="container">
 
-  <h2>Find docks near your destination:</h2>  
+  <h2>Search for the nearest available bike or dock:</h2>  
 
    <div class="form">
-      <%= form_tag searches_path, :method => :post do %>   
+      <%= form_tag searches_path, :method => :post do %>  
       <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-      <%= submit_tag "Find me a dock", :name => :dock %>  
-      <%= submit_tag "Find me a bike", :name => :dock %>  
+      <%= submit_tag "Go" %>   
       <% end %>  
   </div>
 

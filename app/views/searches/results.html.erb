@@ -2,27 +2,27 @@
 
 <div class="results">
   <%  unless @coordinates.nil? %>
-  <ul>
-    <li><%= "Closest station: #{@winning_station["label"]}"%></li>
-    <% if @dock %>
-    <li><%="Available docks: #{@winning_station["availableDocks"] }" %></li>
+    <ul>
+      <% if @winning_bike_station["label"] == @winning_dock_station["label"]  %> 
+      <li><%= "CityBike Station: #{@winning_bike_station["label"]}"%></li>
+      <li><%="Docks: #{@winning_bike_station["availableDocks"] }" %></li>
+      <li><%="Bikes: #{@winning_bike_station["availableBikes"] }" %></li>
+    </ul>
     <% else %>
-    <li><%="Available bikes: #{@winning_station["availableBikes"] }" %></li>
-  <% end %>
-    <li>Huzzah!!</li>
-  </ul>
+    <ul>
+      <li><%= "Docks: #{@winning_dock_station["label"]}"%></li>
+      <li><%="Available: #{@winning_dock_station["availableDocks"] }" %></li>
+      <li><%= "Bikes: #{@winning_bike_station["label"]}"%></li>
+      <li><%="Available: #{@winning_bike_station["availableBikes"] }" %></li>
+    </ul>
+    <% end %>
   <% end  %>
 </div>
 
  <div class="form">
     <%= form_tag user_favorites_path(current_user), :method => :post do %>
     <%= hidden_field_tag "favorite[address]", params[:address]%>
-    <%= submit_tag "Save This Destination" %>
+    <%= submit_tag "Save This Destination", :name => :address %> 
     <% end %>
 </div>
-
-
-
-
-
 

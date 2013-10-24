@@ -1,12 +1,11 @@
 <div class="container">
-  <h2>Find a dock near your destination.</h2>
-  <div class="form">
-    <%= form_tag searches_path, :method => :post do %>   
-    <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-    <%= submit_tag "Find me a dock", :name => :dock %>  
-    <%= submit_tag "Find me a bike", :name => :dock %>  
-    <% end %>  
-  </div>
+<!--   <h2>Search for the nearest available bike or dock:</h2>
+   <div class="form">
+      <%= form_tag searches_path, :method => :post do %>  
+      <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
+      <%= submit_tag "Go", :name => :address %>   
+      <% end %>  
+  </div> -->
   <ul>
     <li>Your Saved Destinations:</li>
     <% @user.favorites.each do |favorite| %>
