@@ -4,7 +4,8 @@
   <%  unless @coordinates.nil? %>
   <ul>
     <li><%= "Closest dock: #{@winning_dock["label"]}"%></li>
-    <li><%="Available docks: #{@winning_dock["availableDocks"] }. Huzzah!!" %></li>
+    <li><%="Available docks: #{@winning_dock["availableDocks"] }" %></li>
+    <li>Huzzah!!</li>
   </ul>
   <% end  %>
 </div>
@@ -12,7 +13,7 @@
  <div class="form">
     <%= form_tag user_favorites_path(current_user), :method => :post do %>
     <%= hidden_field_tag "favorite[address]", params[:address]%>
-    <%= submit_tag "Save Search to Favorites!" %>
+    <%= submit_tag "Save This Destination" %>
     <% end %>
 </div>
 
