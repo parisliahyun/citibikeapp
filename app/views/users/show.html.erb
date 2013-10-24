@@ -1,12 +1,11 @@
 <div class="container">
   <h2>Find a dock near your destination.</h2>
-  <div class="container">
-   <div class="form">
-      <%= form_tag searches_path, :method => :post do %>   
-      <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-      <%= submit_tag "Go", :name => nil %>  
-      <% end %>  
-    </div> 
+  <div class="form">
+    <%= form_tag searches_path, :method => :post do %>   
+    <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
+    <%= submit_tag "Find me a dock", :name => :dock %>  
+    <%= submit_tag "Find me a bike", :name => :dock %>  
+    <% end %>  
   </div>
   <ul>
     <li>Your Saved Destinations:</li>
@@ -17,4 +16,6 @@
     <% end %>
   </ul>
 </div>
+
+
 

@@ -1,12 +1,11 @@
 class SearchesController < ApplicationController
 
 # TODO if winning_dock's available_docks == 0 within .1 miles of user's position, send notification to reroute with address to available dock.  
-# change search result to p tag so it automatically becomes a link.
-# newsletter sign up column, boolean for user's table. 
+# twitter
+# newsie 
 # suggestion box
-# about page.
+# about page
 # find a bike. DONE
-# add map it functionality, just a link.
 # review account route and about route make sure it's in the right view. DONE   
 
 
