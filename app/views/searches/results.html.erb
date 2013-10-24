@@ -19,10 +19,24 @@
   <% end  %>
 </div>
 
+
  <div class="form">
     <%= form_tag user_favorites_path(current_user), :method => :post do %>
     <%= hidden_field_tag "favorite[address]", params[:address]%>
     <%= submit_tag "Save This Destination", :name => :address %> 
     <% end %>
 </div>
+
+
+<!-- next best -->
+<h2>next best:</h2>
+    <%  unless @coordinates.nil? %>
+  <ul>         
+    <% "Next Best Station: #{@next_best_station[0]["label"]}" %>
+    <% "Docks: #{@next_best_station[0]["availableDocks"]}" %>
+    <% "Bikes: #{@next_best_station[0]["availableBikes"]}" %>
+  <ul>
+    <% end  %>
+
+
 

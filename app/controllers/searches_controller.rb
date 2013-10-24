@@ -10,11 +10,11 @@ class SearchesController < ApplicationController
     unless @coordinates.nil?
 
       @coordinates = { latitude: @coordinates[0], longitude: @coordinates[1] }
-      all_citibike_stations = Citibikenyc.stations.values[2]
+      @all_citibike_stations = Citibikenyc.stations.values[2]
 
-      available_stations_for_docks = all_citibike_stations.reject { |d| d["availableDocks"] == 0 }
+      available_stations_for_docks = @all_citibike_stations.reject { |d| d["availableDocks"] == 0 }
 
-      available_stations_for_bikes = all_citibike_stations.reject { |d| d["availableBikes"] == 0 } 
+      available_stations_for_bikes = @all_citibike_stations.reject { |d| d["availableBikes"] == 0 } 
 
       @winning_dock_station = available_stations_for_docks.min_by do |station|
         distance_x = @coordinates[:longitude] - station["longitude"]
@@ -27,6 +27,14 @@ class SearchesController < ApplicationController
         distance_y = @coordinates[:latitude] - station["latitude"]
         Math.hypot( distance_x, distance_y )
       end 
+
+########## next best logic ##############
+
+        if @winning_bike_station["label"] == @winning_dock_station["label"]
+        @id = @winning_bike_station["nearbyStations"][0]["id"] 
+        @next_best_station = @all_citibike_stations.select do |station| station["id"] == @id
+        end
+        end
 
      render :results
     else

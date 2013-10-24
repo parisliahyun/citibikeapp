@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="results">
+    <%  unless @coordinates.nil? %>
+      <ul>
+        <% if @winning_bike_station["label"] == @winning_dock_station["label"] %>
+        <% id = @winning_bike_station["nearbyStations"][0] %>
+        <% next_best = @all_citibike_stations.select do |station| station["id"] == id %>
+        <% end %>
+        <%= "Next Best Station: next_best["label"]" %>
+        <%= "Docks: next_best["availableDocks"]" %>
+        <%= "Bikes: next_best["availableBikes"]" %>
+
+      <% else %>
+      <ul>
+
+        <% id = @winning_bike_station["nearbyStations"][0] %>
+        <% next_best = @all_citibike_stations.select do |station| station["id"] == id %>
+        <% end %>
+        <%= "Next Best Station: next_best["label"]" %>
+        <%= "Bikes: next_best["availableBikes"]" %>
+
+        <% id = @winning_dock_station["nearbyStations"][0] %>
+        <% next_best = @all_citibike_stations.select do |station| station["id"] == id %>
+        <% end %>
+        <%= "Next Best Station: next_best["label"]" %>
+        <%= "Docks: next_best["availableDocks"]" %>
+      </ul>
+    <% end %>
+  <% end  %>
+  </div>
+</div>
