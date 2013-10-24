@@ -3,8 +3,8 @@
 <div class="results">
   <%  unless @coordinates.nil? %>
   <ul>
-    <li><p><%= "Closest dock: #{@winning_dock["label"]}"%></p></li>
-    <li><p><%="Available docks: #{@winning_dock["availableDocks"] }. Huzzah!!" %></p></li>
+    <li><%= "Closest dock: #{@winning_dock["label"]}"%></li>
+    <li><%="Available docks: #{@winning_dock["availableDocks"] }. Huzzah!!" %></li>
   </ul>
   <% end  %>
 </div>
@@ -17,8 +17,8 @@
 </div>
 
 <ul>
-  <li><h3><%= link_to "New Search", new_search_path %></h3></li>
-  <li><h3><%= link_to "Go to Favorites", user_path(current_user) %></h3></li>
+  <li><h2><%= link_to "New Search", new_search_path %></h2></li>
+  <li><h2><%= link_to "Go to Favorites", user_path(current_user) %></h2></li>
 </ul>
 
 

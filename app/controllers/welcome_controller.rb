@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
     render :index
   end  
 
+  def account
+    render :account
+  end
+
 end  

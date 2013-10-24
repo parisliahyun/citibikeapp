@@ -1,7 +1,7 @@
 Citi::Application.routes.draw do
   resources :searches, only: [:new, :create]
   
-  resources :users, only: [:new, :create, :show, :delete]
+  resources :users, only: [:index, :new, :create, :show, :destroy]
 
   resources :users do
     resources :favorites
@@ -10,6 +10,7 @@ Citi::Application.routes.draw do
       end 
   end
 
+  get 'account' => 'welcome#account'
   root 'welcome#index'
   # get 'searches' => 'searches#index'
   # get 'searches/results' => 'searches#results'
