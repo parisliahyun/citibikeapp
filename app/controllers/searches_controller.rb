@@ -31,9 +31,9 @@ class SearchesController < ApplicationController
 ########## next best logic ##############
 
         if @winning_bike_station["label"] == @winning_dock_station["label"]
-        @id = @winning_bike_station["nearbyStations"][0]["id"] 
-        @next_best_station = @all_citibike_stations.select do |station| station["id"] == @id
-        end
+          id = @winning_bike_station["nearbyStations"][0]["id"] 
+          @next_best_station = @all_citibike_stations.select do |station| station["id"] == id
+          end
         end
 
      render :results

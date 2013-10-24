@@ -30,13 +30,11 @@
 
 <!-- next best -->
 <h2>next best:</h2>
-    <%  unless @coordinates.nil? %>
   <ul>         
-    <% "Next Best Station: #{@next_best_station[0]["label"]}" %>
-    <% "Docks: #{@next_best_station[0]["availableDocks"]}" %>
-    <% "Bikes: #{@next_best_station[0]["availableBikes"]}" %>
+    <li><%= "Next Best Station: #{@next_best_station[0]["label"]}" %></li>
+    <li><%= "Docks: #{@next_best_station[0]["availableDocks"]}" %></li>
+    <li><%= "Bikes: #{@next_best_station[0]["availableBikes"]}" %></li>
   <ul>
-    <% end  %>
 
 
 
