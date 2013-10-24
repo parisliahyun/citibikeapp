@@ -9,7 +9,7 @@
     </div> 
   </div>
   <ul>
-    <li>your favorites:</li>
+    <li>Your Saved Destinations:</li>
     <% @user.favorites.each do |favorite| %>
     <%= form_tag searches_path, :method => :post do %>
     <%= submit_tag "#{favorite.address}", :name => :address %>

@@ -5,12 +5,13 @@
    <div class="form">
       <%= form_tag searches_path, :method => :post do %>   
       <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-      <%= submit_tag "Go", :name => nil %>  
+      <%= submit_tag "Find me a dock", :name => :dock %>  
+      <%= submit_tag "Find me a bike", :name => :dock %>  
       <% end %>  
   </div>
 
   <ul>
-    <li><h2><%= link_to "Go to Favorites", user_path(current_user) %></h2></li>
+    <li><h2><%= link_to "Go to Saved Destinations", user_path(current_user) %></h2></li>
   </ul>
 
 </div>
