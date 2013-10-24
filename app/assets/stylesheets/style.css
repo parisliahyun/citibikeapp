@@ -1,3 +1,5 @@
+
+
 body {
     width: 100%;
     font-family: sans-serif;
@@ -5,6 +7,15 @@ body {
     margin: 0 auto;
     text-align: center;
     }
+/*
+div.mural {
+    background-image: url("http://images.huffingtonpost.com/2013-05-30-citibike.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: relative;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+} */ 
 
 .container {
     width: 100%;

@@ -1,9 +1,13 @@
 class SearchesController < ApplicationController
 
-  # TODO if winning_dock's available_docks == 0 within .1 miles of user's position, send notification to reroute with address to available dock. 
-  # TODO /searches/new => search form 
-  # TODO POST /searches #create should render: show DOING
-  # TODO show.html.erb and new.html.erb
+# TODO if winning_dock's available_docks == 0 within .1 miles of user's position, send notification to reroute with address to available dock. 
+# change search result to p tag so it automatically becomes a link.
+# newsletter sign up column, boolean for user's table.
+# suggestion box
+# about page.
+# find a bike. 
+# remove name from sign in. DONE
+# 
 
 
   def new
