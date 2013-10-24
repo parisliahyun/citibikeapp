@@ -7,7 +7,7 @@ class SearchesController < ApplicationController
 # about page.
 # find a bike. DONE
 # add map it functionality, just a link.
-# review account route and about route make sure it's in the right view. DONE
+# review account route and about route make sure it's in the right view. DONE   
 
 
   def new
@@ -16,7 +16,6 @@ class SearchesController < ApplicationController
 
   def create
     @coordinates = Geocoder.coordinates(params[:address])
-    binding.pry
     @dock = params[:dock] == "Find me a dock"
     
     unless @coordinates.nil?
