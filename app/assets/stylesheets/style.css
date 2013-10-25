@@ -546,6 +546,10 @@ h3 {
     font-family: serif;
 }
 
+.results li {
+    font-family: oxygen;
+}
+
 .results {
     width: 100%;
     margin-top: 150px; 
@@ -614,6 +618,7 @@ h7 {
 }
 
 .new_user, .login, .saved_destination, .go {
+    font-family: oxygen;
     color: #4E2F2F;
     font-weight: bold;
     background-color: D3D3D3;
