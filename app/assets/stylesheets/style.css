@@ -434,7 +434,7 @@ body {
 
 .nav li {
     float: left;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .nav ul {
@@ -568,7 +568,7 @@ h3 {
     margin-top: 30px;
 }
 .saved {
-    margin-top: -70px;
+    margin-top: -10px;
 
 }
 
