@@ -1,11 +1,13 @@
 <div class="container">
   <div class="form">
-    <%= form_tag session_path, :method => :post do %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %></br>
-    <%= label_tag :password %></br>
-    <%= password_field_tag :password %>
-    <%= submit_tag "Login", :class => 'login'%>
-    <% end %>
+    <ul>
+      <%= form_tag session_path, :method => :post do %>
+      <%= label_tag :email %></br>
+      <%= text_field_tag :email %></br>
+      <%= label_tag :password %></br>
+      <%= password_field_tag :password %></br>
+      <%= submit_tag "Login", :class => 'login'%>
+      <% end %>
+    </ul>
   </div>
 </div>

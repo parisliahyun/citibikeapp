@@ -2,7 +2,7 @@
 
 body {
     width: 100%;
-    font-family: oxygen;
+    font-family: arial;
     background-color: white;
     margin: 0 auto;
     text-align: center;
@@ -80,31 +80,6 @@ li {
     border-radius: 50px;
     border: 2px solid #999;
 }
-
-/*FORMS STYLE*/
- .form {
-    text-align: center;
-    /*display: inline-block;*/
-    margin: 0 auto;
-    padding-top: 10px;
-    margin: 30px auto 0 auto;
-    background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-    width:800px;
-    height:200px;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    color: #09C;
-    text-decoration: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding-bottom: 80px;
-    width: 65%;
-    height: 65%;
-    /*border: solid 3px red;*/
-    }
 
 input    {
     text-align: center;
@@ -236,3 +211,26 @@ h7 {
     font-weight: bold;
     background-color: D3D3D3;
 }
+
+/*FORMS STYLE*/
+ .form {
+    display: inline-block;
+    padding-top: 10px;
+    margin-top: 30px; 
+    background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #09C;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+    }
