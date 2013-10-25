@@ -28,7 +28,7 @@ class SearchesController < ApplicationController
         Math.hypot( distance_x, distance_y )
       end 
 
-########## next best logic ##############
+########## next closest station logic ##############
 
         if @winning_bike_station["label"] == @winning_dock_station["label"]
           id = @winning_bike_station["nearbyStations"][0]["id"] 

@@ -32,6 +32,7 @@
   </div>
 
 <!-- next best -->
+<% if @winning_bike_station["label"] == @winning_dock_station["label"] %>
   <div class="next_best">
       <ul>  
         <li>Next closest station:</li>       
@@ -39,6 +40,7 @@
         <li><%= "Docks: #{@next_best_station[0]["availableDocks"]}.  Bikes: #{@next_best_station[0]["availableBikes"]}" %></li>
       <ul>
   </div>
+  <% end %>
 
     <div class="destination">
       <%= form_tag user_favorites_path(current_user), :method => :post do %>
