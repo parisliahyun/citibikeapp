@@ -434,7 +434,7 @@ body {
 
 .nav li {
     float: left;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .nav ul {
@@ -575,12 +575,13 @@ h3 {
 h6 {
     text-align: center;
     font-family: oxygen;
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-top: 2px;
     margin-bottom: 2px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    font-size: 30px;
+    font-size: 50px;
     color: #8B7D6B;
 }
 
@@ -603,8 +604,8 @@ h7 {
     color: #8B7D6B; 
 }
 .account {
-    line-height: 100px;
-    margin-top: 160px; 
+    line-height: 150px;
+    margin-top: 180px; 
 }
 
 .form_user {
