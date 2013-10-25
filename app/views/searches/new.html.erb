@@ -12,17 +12,18 @@
       </ul>
     </div>
 
-  <h2>Search for the nearest available bike or dock:</h2>  
-
+    <div class="search_title">
+      <h7>Search for the nearest available bike or dock:</h7>  
+    </div>
    <div class="form">
       <%= form_tag searches_path, :method => :post do %>  
       <%= text_field_tag :address, params[:address], placeholder: 'street city and zip...'%>  
-      <%= submit_tag "Go" %>   
+      <%= submit_tag "Go", :class => 'go' %>   
       <% end %>  
   </div>
 
-  <ul>
-    <li><h2><%= link_to "Go to Saved Destinations", user_path(current_user) %></h2></li>
-  </ul>
+  <div class="saved">
+    <h6><%= link_to "Go to Saved Destinations", user_path(current_user) %></h6>
+  </div>
 
 </div>

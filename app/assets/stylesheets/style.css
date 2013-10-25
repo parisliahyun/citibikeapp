@@ -2,7 +2,7 @@
 
 body {
     width: 100%;
-    font-family: sans-serif;
+    font-family: oxygen;
     background-color: white;
     margin: 0 auto;
     text-align: center;
@@ -14,127 +14,7 @@ body {
     width: 100%;
     margin-top: 5px;
     margin: 0 auto;
-}
-
-
-.results {
-    padding-top: 10px;  
-}
-
-#clear {
-    padding-top: 120px;
-
-}
-
-a:link, a:visited {
-    color: gray;
-    text-decoration: none;
-}
-
-ul {
-    /*padding-top: 80px;*/
-    font-family: sans-serif;
-    padding-bottom: 60px;
-}
-
-li {
-    font-family: sans-serif;
-    padding-right: 30px;
-    color: gray;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    text-decoration: none;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-}
- 
-p {
-font-size: 18px;
-margin-left: 20px;
-
- }
-
- #button {
-    background: orange;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    font-family: arial;
-    height:30px;
-    width: 30px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border: 2px solid #999;
-}
-
-/*FORMS STYLE*/
- .form {
-    display: inline-block;
-    margin: 0 auto;
-    padding-top: 10px;
-    margin: 30px auto 0 auto;
-    background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-    width:800px;
-    height:200px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #09C;
-    text-decoration: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding-bottom: 80px;
-    }
-
-input    {
     text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 36px;
-    margin: 20px auto;
-    width: 900px;
-    border: 1px solid #999;
-    height: 100px;
-    color: 2d2d2d2d;
-    font-family: oxygen;
-    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-
-h5 {
-    text-align: center;
-    font-family: oxygen;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 80px;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    font-size: 50px;
-    color: gray;
-}
-
-h1 {
-  margin-top: 150px; 
-  color: #FF0000;
-  font-size: 80px;
-}
-
-h2 {
-    text-align: center;
-    font-family: oxygen;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 80px;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    font-size: 50px;
-    color: gray;
 }
 
 .nav {
@@ -142,12 +22,11 @@ h2 {
     margin: 0;
     padding: 0;
     list-style: none;
-/*    background-color: #eaeaea;
-    border: solid 3px #eaeaea;*/
 }
 
 .nav li {
     float: left;
+    font-size: 20px;
 }
 
 .nav ul {
@@ -171,5 +50,204 @@ h2 {
     font-size: 18px;
 }
 
+a:link, a:visited {
+    color: #FF0000;
+    text-decoration: none;
+}
 
+ul {
+    font-family: oxygen;
+    /*padding-bottom: 60px;*/
+}
 
+li {
+    font-family: oxygen;
+    padding-right: 30px;
+    color: #8B7D6B;
+    font-size: 50px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+ #button {
+    background: orange;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+    height:30px;
+    width: 30px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid #999;
+}
+
+/*FORMS STYLE*/
+ .form {
+    text-align: center;
+    /*display: inline-block;*/
+    margin: 0 auto;
+    padding-top: 10px;
+    margin: 30px auto 0 auto;
+    background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    width:800px;
+    height:200px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #09C;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-bottom: 80px;
+    width: 65%;
+    height: 65%;
+    /*border: solid 3px red;*/
+    }
+
+input    {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    width: 900px;
+    border: solid 1px #8B7D6B;
+    height: 100px;
+    color: 2d2d2d2d;
+    font-family: oxygen;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bar {
+    text-align: center;
+    margin-left; -3 em;
+    margin-right: 0 auto;
+    font-color: orange;
+    border: solid 3px red;
+
+}
+
+h5 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: #8B7D6B;
+
+}
+
+h1 {
+    font-family: oxygen;
+    margin-top: 230px; 
+    margin-bottom: 80px;
+    color: #8B7D6B;
+    font-size: 90px;
+}
+
+h2 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: #8B7D6B;
+}
+
+h3 {
+    font-size: 40px;
+    color: #CBCAB6;
+    line-height: 16px;
+    font-family: serif;
+}
+
+.results {
+    width: 100%;
+    margin-top: 150px; 
+}
+
+.next_best {
+    width: 100%;
+    padding-top: 10px;  
+    font: ;
+}
+
+.destination {
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 40px;
+    margin: 0 auto;
+}
+
+.saved_2 {
+    margin-top: 30px;
+}
+.saved {
+    margin-top: -70px;
+
+}
+
+h6 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 30px;
+    color: #8B7D6B;
+}
+
+h7 {
+    text-align: center;
+    font-family: arial;
+    margin-top: 110px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 40px;
+    color: #8B7D6B;
+}
+
+.search_title {
+    margin-top: 250px;
+}
+
+.account li a {
+    font-family: arial;
+    color: #8B7D6B; 
+}
+.account {
+    line-height: 100px;
+    margin-top: 160px; 
+}
+
+.form_user {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.new_user, .login, .saved_destination, .go {
+    color: #4E2F2F;
+    font-weight: bold;
+    background-color: D3D3D3;
+}

@@ -12,41 +12,55 @@
       </ul>
     </div>
 
-<div class="results">
-  <%  unless @coordinates.nil? %>
-    <ul>
-      <% if @winning_bike_station["label"] == @winning_dock_station["label"]  %> 
-      <li><%= "CityBike Station: #{@winning_bike_station["label"]}"%></li>
-      <li><%="Docks: #{@winning_bike_station["availableDocks"] }" %></li>
-      <li><%="Bikes: #{@winning_bike_station["availableBikes"] }" %></li>
-    </ul>
-    <% else %>
-    <ul>
-      <li><%= "Docks: #{@winning_dock_station["label"]}"%></li>
-      <li><%="Available: #{@winning_dock_station["availableDocks"] }" %></li>
-      <li><%= "Bikes: #{@winning_bike_station["label"]}"%></li>
-      <li><%="Available: #{@winning_bike_station["availableBikes"] }" %></li>
-    </ul>
-    <% end %>
-  <% end  %>
-</div>
-
-
- <div class="form">
-    <%= form_tag user_favorites_path(current_user), :method => :post do %>
-    <%= hidden_field_tag "favorite[address]", params[:address]%>
-    <%= submit_tag "Save This Destination", :name => :address %> 
-    <% end %>
-</div>
-
+  <div class="results">
+    <%  unless @coordinates.nil? %>
+      
+      <ul>
+        <% if @winning_bike_station["label"] == @winning_dock_station["label"]  %> 
+        <li><%= "CityBike Station: #{@winning_bike_station["label"]}"%></li>
+        <li><%="Docks: #{@winning_bike_station["availableDocks"] }.  Bikes: #{@winning_bike_station["availableBikes"] }"  %></li>
+      </ul>
+      <% else %>
+      <ul>
+        <li><%= "Docks: #{@winning_dock_station["label"]}"%></li>
+        <li><%="Available: #{@winning_dock_station["availableDocks"] }" %></li>
+        <li><%= "Bikes: #{@winning_bike_station["label"]}"%></li>
+        <li><%="Available: #{@winning_bike_station["availableBikes"] }" %></li>
+      </ul>   
+      <% end %>
+    <% end  %>
+  </div>
 
 <!-- next best -->
-<h2>next best:</h2>
-  <ul>         
-    <li><%= "Next Best Station: #{@next_best_station[0]["label"]}" %></li>
-    <li><%= "Docks: #{@next_best_station[0]["availableDocks"]}" %></li>
-    <li><%= "Bikes: #{@next_best_station[0]["availableBikes"]}" %></li>
-  <ul>
+  <div class="next_best">
+      <ul>  
+        <li>Next closest station:</li>       
+        <li><%= "#{@next_best_station[0]["label"]}" %></li>
+        <li><%= "Docks: #{@next_best_station[0]["availableDocks"]}.  Bikes: #{@next_best_station[0]["availableBikes"]}" %></li>
+      <ul>
+  </div>
+
+    <div class="destination">
+      <%= form_tag user_favorites_path(current_user), :method => :post do %>
+      <%= hidden_field_tag "favorite[address]", params[:address]%>
+      <%= submit_tag "Save This Destination", :class => 'saved_destination', :name => :address %> 
+      <% end %>
+  </div>
+
+<div class="saved_2">
+    <h6><%= link_to "Go to Saved Destinations", user_path(current_user) %></h6>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

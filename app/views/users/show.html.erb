@@ -12,10 +12,11 @@
       </ul>
     </div>
   <ul>
+
     <h2>Your Saved Destinations:</h2>
     <% @user.favorites.each do |favorite| %>
     <%= form_tag searches_path, :method => :post do %>
-    <%= submit_tag "#{favorite.address}", :name => :address %>
+    <%= submit_tag "#{favorite.address}", :class => 'saved_destination', :name => :address %>
     <% end %>
     <% end %>
   </ul>
