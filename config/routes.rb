@@ -1,5 +1,5 @@
 Citi::Application.routes.draw do
-  resources :searches, only: [:new, :create]
+  resources :searches, only: [:new, :create, :index]
   resources :users do
     # member do
     #     get 'account'

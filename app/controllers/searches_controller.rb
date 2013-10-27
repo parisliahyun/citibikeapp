@@ -1,5 +1,7 @@
 class SearchesController < ApplicationController
 
+  # TODO change search index to redirect to a refresh of the results page.
+
   def new
     render :new
   end
@@ -40,7 +42,12 @@ class SearchesController < ApplicationController
     else
      render erb: "<%= debug Geocoder.coordinates(params[:address]) %>"  
     end
- end   
+  end
+
+  def index
+    redirect_to new_search_path
+  end
+
 end 
 
 
