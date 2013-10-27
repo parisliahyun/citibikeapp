@@ -22,8 +22,8 @@
       <% else %>
       <ul>
         <li><%= "Docks:"%><address><%="#{@winning_dock_station["label"].gsub("Broadway & W 24 St","1107 Broadway") + " NY"}"%></address></li>
-        <li><%="Available: #{@winning_dock_station["availableDocks"] }" %></li>
-        <li><%= "Bikes:"%>"<address><%="#{@winning_bike_station["label"] + " NY"}"%></address></li>
+        <li><%="Available: #{@winning_dock_station["availableDocks"] }" %></li></br>
+        <li><%= "Bikes: "%><address><%="#{@winning_bike_station["label"] + " NY"}"%></address></li>
         <li><%="Available: #{@winning_bike_station["availableBikes"] }" %></li>
       </ul>   
       <% end %>
