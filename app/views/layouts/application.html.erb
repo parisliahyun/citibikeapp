@@ -2,32 +2,24 @@
 <html>
 <head>
   <title>Awesome Citi</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="nav">
-      <ul>
-        <% if logged_in? %>
-        <li><%= link_to "Awesome Citi", root_path %> </li>
-        <li><%= link_to "My Account", account_path %> </li>
-        <li><%= link_to "New Search", new_search_path %> </li>
-        <li><%= link_to "Saved Destinations", user_path(current_user) %></li>
-        <li><a href="http://citibikenyc.com/stations"target="_blank">Station Map</a></li>
-        <li><%= link_to 'Logout', session_path, :method => :delete %> </li>
-        <% end %>
-      </ul>
-  </div>
-<%= yield %>
+  <%= render 'layouts/header'%>
+<div class="container">
+  <%= yield %>
+</div>
 <footer>
-  <% javascript_include_tag(:application) %>
 </footer>
 </div>
 
 </body>
 </html>
 
+      
 
 
 

@@ -1,22 +1,21 @@
-<div class="container">
-  <div class="form">
-    <% unless @user.errors.none? %>
-      <% @user.errors.full_messages.each do |msg| %> 
-      <%= msg %>
-      <% end %>
+<div class="form">
+  <% unless @user.errors.none? %>
+    <% @user.errors.full_messages.each do |msg| %> 
+    <%= msg %>
     <% end %>
+  <% end %>
 <ul>
-    <%= form_for @user do |f| %>
-      <%= f.label :username %></br>
-      <%= f.text_field :username %></br>
-      <%= f.label :email %></br>
-      <%= f.email_field :email %></br>
-      <%= f.label :password %></br>
-      <%= f.password_field :password %></br>
-      <%= f.label :password_confirmation %></br>
-      <%= f.password_field :password_confirmation %></br>
-      <%= f.submit 'Save', :class => 'new_user'%>
-    <% end %>
-  </ul>  
-  </div>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %></br>
+    <%= f.text_field :username %></br>
+    <%= f.label :email %></br>
+    <%= f.email_field :email %></br>
+    <%= f.label :password %></br>
+    <%= f.password_field :password %></br>
+    <%= f.label :password_confirmation %></br>
+    <%= f.password_field :password_confirmation %></br>
+    <%= f.submit 'Save', :class => 'new_user'%>
+  <% end %>
+</ul>  
 </div>
+

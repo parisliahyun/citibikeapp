@@ -1,14 +1,16 @@
 class SearchesController < ApplicationController
 
   # TODO change search index to redirect to a refresh of the results page.
-
+  # TODO add bootstrap
+  # TODO add text messaging
+  
   def new
     render :new
   end
 
   def create
+
     @coordinates = Geocoder.coordinates(params[:address])
-    
     unless @coordinates.nil?
 
       @coordinates = { latitude: @coordinates[0], longitude: @coordinates[1] }
@@ -28,15 +30,15 @@ class SearchesController < ApplicationController
         distance_x = @coordinates[:longitude] - station["longitude"]
         distance_y = @coordinates[:latitude] - station["latitude"]
         Math.hypot( distance_x, distance_y )
-      end 
+        end 
 
 ########## next closest station logic ##############
 
-        if @winning_bike_station["label"] == @winning_dock_station["label"]
-          id = @winning_bike_station["nearbyStations"][0]["id"] 
-          @next_best_station = @all_citibike_stations.select do |station| station["id"] == id
-          end
-        end
+      if @winning_bike_station["label"] == @winning_dock_station["label"]
+        id = @winning_bike_station["nearbyStations"][0]["id"] 
+        @next_best_station = @all_citibike_stations.select do |station| station["id"] == id
+      end
+    end
 
      render :results
     else
@@ -49,8 +51,3 @@ class SearchesController < ApplicationController
   end
 
 end 
-
-
-
-
-

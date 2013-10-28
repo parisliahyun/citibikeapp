@@ -42,5 +42,16 @@
     <h6><%= link_to "New Search", new_search_path %> </h6>
   </div> 
 
+
 </div>
+<script>
+ $(document).ready(function () {
+    //Convert address tags to google map links - Copyright Michael Jasper 2011
+    $('address').each(function () {
+        var link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
+        $(this).html(link);
+    });
+}); 
+</script>
+
 

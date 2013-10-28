@@ -1,0 +1,277 @@
+$baseFontFamily: Oxygen; 
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+body {
+    font-family: sans-serif;
+    /*padding-top: 60px;*/
+    padding-bottom: 60px;
+    width: auto !important;
+    overflow-x: hidden !important;
+    height: 100%;
+    background-color: #ffffff;
+    }
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.navbar div.navbar-inner ul.nav a:hover {
+    color: #ddc92a !important; 
+}
+
+.navbar-nav > li > a {
+    text-transform: uppercase; 
+    color: #FF0000 !important;
+    /*background: none repeat scroll 0% 0% #000000 !important;*/
+    display: block !important;
+    padding: 1.3rem 2rem;
+    text-decoration: none !important;   
+    font-size:15px !important; 
+    border-top: 1px solid #D8D8D8 !important;
+    margin-top: -0.8px;
+    font-family: helvetica;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    padding: 1.3rem 2rem;
+    margin-top: -0.8px;
+}
+
+/*.nav ul > li > a:link {
+    color: #FF0000;
+}*/
+
+.nav ul > li > a:link, a:visited {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+ul {
+    font-family: oxygen;
+}
+
+li {
+    font-family: oxygen;
+    padding-right: 30px;
+    color: #8B7D6B;
+    font-size: 50px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+ #button {
+    background: orange;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+    height:30px;
+    width: 30px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid #999;
+}
+
+input    {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    width: 850px;
+    border: solid 1px #8B7D6B;
+    height: 100px;
+    color: 2d2d2d2d;
+    font-family: oxygen;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+h5 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: #8B7D6B;
+
+}
+
+h1 {
+    font-family: oxygen;
+    color: #8B7D6B;
+    font-size: 90px;
+}
+
+h2 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: #8B7D6B;
+}
+
+h3 {
+    font-size: 40px;
+    color: #CBCAB6;
+    line-height: 16px;
+    font-family: serif;
+}
+
+.results li {
+    font-family: oxygen;
+}
+
+.results {
+    width: 100%;
+    margin-top: 150px; 
+}
+
+.next_best {
+    width: 100%;
+    padding-top: 10px;  
+}
+
+.destination {
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 40px;
+    margin: 0 auto;
+}
+
+.saved_2 {
+    padding-top: 10px;
+    margin-bottom: 70px;
+    
+}
+.saved {
+    margin-top: -10px;
+    /*border: solid 3px red;*/
+    padding-bottom: 80px;
+
+}
+
+h6 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 50px;
+    color: #8B7D6B;
+}
+
+h7 {
+    text-align: center;
+    font-family: arial;
+    margin-top: 110px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 40px;
+    color: #8B7D6B;
+}
+
+.search_title {
+    margin-top: 150px;
+}
+
+.account li a {
+    font-family: arial;
+    color: #8B7D6B; 
+}
+.account {
+    line-height: 150px;
+    margin-top: 180px; 
+}
+
+.form_user {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.new_user, .login, .saved_destination, .go {
+    font-family: oxygen;
+    color: #4E2F2F;
+    font-weight: bold;
+    background-color: D3D3D3;
+}
+
+/*FORMS STYLE*/
+ .form {
+    display: inline-block;
+    padding-top: 10px;
+    margin-top: 10px; 
+    background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+    line-height: 30px;
+    font-weight: bold;
+    color: #09C;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+    }
+
+img {
+    border: solid 3px #FF0000;
+    margin-top: 20px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-decoration: none;
+}
+
+.twitter li {
+    font-size: 20px;
+}
+
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+h1 {
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  padding-top: 25px;
+  color: #ffffff;
+  font-size: 60px;
+}
+
+div.greeting {
+  text-align: center;
+}  
+
+
+
+
+
+
+} 
