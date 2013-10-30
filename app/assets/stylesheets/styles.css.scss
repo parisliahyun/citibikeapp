@@ -3,22 +3,14 @@ $baseFontFamily: Oxygen;
 
 body {
     font-family: sans-serif;
-    /*padding-top: 60px;*/
+/*    padding-top: 60px;*/
     padding-bottom: 60px;
-    width: auto !important;
+    width: 100% !important;
     overflow-x: hidden !important;
     height: 100%;
     background-color: #ffffff;
-    }
-
-.container {
     margin: 0 auto;
-    text-align: center;
-}
-
-div.navbar div.navbar-inner ul.nav a:hover {
-    color: #ddc92a !important; 
-}
+    }
 
 .navbar-nav > li > a {
     text-transform: uppercase; 
@@ -37,19 +29,44 @@ div.navbar div.navbar-inner ul.nav a:hover {
     list-style: none;
     padding: 1.3rem 2rem;
     margin-top: -0.8px;
+
 }
 
-/*.nav ul > li > a:link {
-    color: #FF0000;
-}*/
+.nav ul > li > a:link, a:hover {
+    color: #ddc92a !important; 
+    text-decoration: none;
+}
 
 .nav ul > li > a:link, a:visited {
     color: #FF0000;
     text-decoration: none;
 }
 
+nav.collapse .navbar-collapse .navbar-ex1-collapse {
+    display: inline !important;
+    position: relative;
+}
+
+/*.navbar-toggle, .navbar-brand {
+    position: relative;
+    z-index:1;
+}*/
+
+.container {
+    margin-top: 50px !important;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.well {
+    height: 100%;
+}
+
 ul {
     font-family: oxygen;
+    width: 100%;
+    margin-right: 0 auto;
+    margin-left: 0 auto;
 }
 
 li {
@@ -64,18 +81,8 @@ li {
     margin-right: 0 auto;
 }
 
- #button {
-    background: orange;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    font-family: arial;
-    height:30px;
-    width: 30px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    border: 2px solid #999;
+.button {
+    
 }
 
 input    {
@@ -87,7 +94,8 @@ input    {
     margin-bottom: 20px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    width: 850px;
+    width: 100%;
+    float: right;
     border: solid 1px #8B7D6B;
     height: 100px;
     color: 2d2d2d2d;
@@ -111,9 +119,18 @@ h5 {
 }
 
 h1 {
-    font-family: oxygen;
-    color: #8B7D6B;
+    text-align: center;
+    line-height: 130px;
+    display: inline-block;
     font-size: 90px;
+    color: #8B7D6B;
+    font-family: oxygen;
+    height: 100px;
+    margin-left: 0 auto !important;
+    margin-right: 0 auto !important;
+    /*padding-bottom: 80px;*/
+    margin-top: 20px;
+    /*margin-bottom: 30px;*/
 }
 
 h2 {
@@ -131,7 +148,7 @@ h2 {
 h3 {
     font-size: 40px;
     color: #CBCAB6;
-    line-height: 16px;
+    line-height: 30px;
     font-family: serif;
 }
 
@@ -141,7 +158,7 @@ h3 {
 
 .results {
     width: 100%;
-    margin-top: 150px; 
+    margin-top: 100px; 
 }
 
 .next_best {
@@ -152,13 +169,15 @@ h3 {
 .destination {
     width: 100%;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 40px;
     margin-top: 40px;
     margin: 0 auto;
 }
 
 .saved_2 {
-    padding-top: 10px;
+    font-family: oxygen;
+    margin-top: 20px !important;
+    padding-top: 30px;
     margin-bottom: 70px;
     
 }
@@ -193,7 +212,7 @@ h7 {
 }
 
 .search_title {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .account li a {
@@ -210,7 +229,12 @@ h7 {
     margin: 0 auto;
 }
 
+div.well {
+    background-color: #ffffff;
+}
+
 .new_user, .login, .saved_destination, .go {
+    height: 100px;
     font-family: oxygen;
     color: #4E2F2F;
     font-weight: bold;
@@ -245,12 +269,13 @@ img {
     margin-left: 0 auto;
     margin-right: 0 auto;
     text-decoration: none;
+/*    width: 30;
+    height: 30;*/
 }
 
 .twitter li {
     font-size: 20px;
 }
-
 
 
 /* Landscape phones and down */
@@ -259,7 +284,7 @@ img {
 h1 {
   text-align: center;
   line-height: 50px;
-  display: block;
+  display: inline-block;
   padding-top: 25px;
   color: #ffffff;
   font-size: 60px;
@@ -268,10 +293,5 @@ h1 {
 div.greeting {
   text-align: center;
 }  
-
-
-
-
-
 
 } 
