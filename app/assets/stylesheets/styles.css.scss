@@ -359,12 +359,12 @@ h5 {
 
 h1 {
     text-align: center;
-    line-height: 30px;
+    line-height: 70px;
     display: inline-block;
-    font-size: 30px;
+    font-size: 50px;
     color: #8B7D6B;
     font-family: oxygen;
-    height: 50px;
+    height: 40px;
     margin-left: 0 auto !important;
     margin-right: 0 auto !important;
     /*padding-bottom: 80px;*/
@@ -380,17 +380,89 @@ h2 {
     margin-top: 30px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    font-size: 18px;
+    font-size: 22px;
     color: #8B7D6B;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: #CBCAB6;
-    line-height: 30px;
+    line-height: 10px;
     font-family: serif;
 }
 
+
+.results li {
+    font-family: oxygen;
+}
+
+.results {
+    width: 100%;
+    margin-top: 100px; 
+}
+
+.next_best {
+    width: 100%;
+    padding-top: 10px;  
+}
+
+.destination {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.saved_2 {
+    font-family: oxygen;
+    margin-top: 10px !important;
+    padding-top: 15px;
+    margin-bottom: 30px;
+    
+}
+.saved {
+    margin-top: -10px;
+    /*border: solid 3px red;*/
+    padding-bottom: 20px;
+
+}
+
+h6 {
+    text-align: center;
+    font-family: oxygen;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 20px;
+    color: #8B7D6B;
+}
+
+h7 {
+    text-align: center;
+    font-family: arial;
+    margin-top: 30px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    font-size: 40px;
+    color: #8B7D6B;
+}
+
+.search_title {
+    margin-top: 20px;
+}
+
+.account li a {
+    font-family: arial;
+    color: #8B7D6B; 
+}
+.account {
+    line-height: 70px;
+    margin-top: 30px; 
+}
 
 
 
