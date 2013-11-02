@@ -7,13 +7,13 @@
 <ul>
   <%= form_for @user do |f| %>
     <%= f.label :username %></br>
-    <%= f.text_field :username %></br>
+    <%= f.text_field :username, :class => 'field' %></br>
     <%= f.label :email %></br>
-    <%= f.email_field :email %></br>
+    <%= f.email_field :email, :class => 'field' %></br>
     <%= f.label :password %></br>
-    <%= f.password_field :password %></br>
+    <%= f.password_field :password, :class => 'field' %></br>
     <%= f.label :password_confirmation %></br>
-    <%= f.password_field :password_confirmation %></br>
+    <%= f.password_field :password_confirmation, :class => 'field' %></br>
     <%= f.submit 'Save', :class => 'new_user'%>
   <% end %>
 </ul>  
