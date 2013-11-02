@@ -1,15 +1,15 @@
-<h2>Your Saved Destinations:</h2>
-<!-- <div class="well"> -->
-    <ul>
-      <% @user.favorites.each do |favorite| %>
-      <%= form_tag searches_path, :method => :post do %>
-      <%= submit_tag "#{favorite.address}", :class => 'saved_destination', :name => :address %>
-      <% end %>
-      <% end %>
-    </ul>
-<!-- </div>  -->
 
-<div class="saved_2">
+<h2>Your Saved Destinations:</h2>
+  <ul>
+    <% @user.favorites.each do |favorite| %>
+    <%= form_tag searches_path, :method => :post do %>
+    <li><%= submit_tag "#{favorite.address}", :class => 'saved_destination', :name => :address %></li>
+    <% end %>
+    <% end %>
+  </ul>
+
+
+<div class="new_search">
   <h6><%= link_to "New Search", new_search_path %> </h6>
 </div>
 
