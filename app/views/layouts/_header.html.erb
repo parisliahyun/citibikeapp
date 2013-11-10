@@ -1,30 +1,28 @@
 <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-<!--           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button> -->
-<!--           <a class="navbar-brand" href="#">
-              <img src="~/Content/Images/logo.png" class="img-responsive">
-          </a> -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <!-- <a class="navbar-brand" href="#"> -->
+              <!-- <img src="~/Content/Images/logo.png" class="img-responsive"> -->
+          <!-- </a> -->
     </div>
-
-    <div class="navbar">
-          <ul class="nav navbar-nav">
-            <% if logged_in? %>
-            <li><%= link_to "Awesome Citi", root_path %> </li>
-            <li><%= link_to "My Account", account_path %> </li>
-            <li><%= link_to "New Search", new_search_path %> </li>
-            <li><%= link_to "Saved Destinations", user_path(current_user) %></li>
-            <li><a href="http://citibikenyc.com/stations"target="_blank">Station Map</a></li>
-            <li><%= link_to 'Logout', session_path, :method => :delete %> </li>
-            <% end %>
-          </ul>
+    <div class="navbar nav-collapse"> 
+      <ul class="nav navbar-nav">
+        <% if logged_in? %>
+        <li><%= link_to "Awesome Citi", root_path %> </li>
+        <li><%= link_to "My Account", account_path %> </li>
+        <li><%= link_to "New Search", new_search_path %> </li>
+        <li><%= link_to "Saved Destinations", user_path(current_user) %></li>
+        <li><a href="http://citibikenyc.com/stations"target="_blank">Station Map</a></li>
+        <li><%= link_to 'Logout', session_path, :method => :delete %> </li>
+        <% end %>
+      </ul>
     </div>
-
 </nav>
 
 

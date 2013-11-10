@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Awesome Citi</title>
-  <script>$('.dropdown-toggle').dropdown();</script>
+
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>$(".collapse").collapse();</script>
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+
+
 </head>
 <body>
    <!-- <h1>AWESOMECITI.NYC</h1>-->
