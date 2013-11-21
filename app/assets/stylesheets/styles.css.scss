@@ -47,6 +47,11 @@ nav.collapse .navbar-collapse .navbar-ex1-collapse {
     position: relative;
 }
 
+/*.navbar-toggle, .navbar-brand {
+    position: relative;
+    z-index:1;
+}*/
+
 .container {
     margin-top: 50px !important;
     margin: 0 auto;
